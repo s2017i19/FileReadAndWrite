@@ -33,8 +33,8 @@
 			this.tabMenu = new System.Windows.Forms.TabControl();
 			this.tpRead = new System.Windows.Forms.TabPage();
 			this.tpWrite = new System.Windows.Forms.TabPage();
-			this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-			this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+			this.openFileDlg = new System.Windows.Forms.OpenFileDialog();
+			this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
 			this.txtReadFile = new System.Windows.Forms.TextBox();
 			this.btnReadFileSelect = new System.Windows.Forms.Button();
 			this.btnReadText = new System.Windows.Forms.Button();
@@ -105,14 +105,14 @@
 			this.tpWrite.Text = "파일쓰기";
 			this.tpWrite.UseVisualStyleBackColor = true;
 			// 
-			// openFileDialog
+			// openFileDlg
 			// 
-			this.openFileDialog.FileName = "openFileDialog1";
-			this.openFileDialog.Filter = "텍스트 파일(*.txt)|*.txt|모든파일 (*.*)|*.*";
+			this.openFileDlg.FileName = "openFileDialog1";
+			this.openFileDlg.Filter = "텍스트 파일(*.txt)|*.txt|모든파일 (*.*)|*.*";
 			// 
-			// saveFileDialog
+			// saveFileDlg
 			// 
-			this.saveFileDialog.Filter = "텍스트 파일(*.txt)|*.txt";
+			this.saveFileDlg.Filter = "텍스트 파일(*.txt)|*.txt";
 			// 
 			// txtReadFile
 			// 
@@ -130,6 +130,7 @@
 			this.btnReadFileSelect.TabIndex = 1;
 			this.btnReadFileSelect.Text = "파일 선택";
 			this.btnReadFileSelect.UseVisualStyleBackColor = true;
+			this.btnReadFileSelect.Click += new System.EventHandler(this.BtnReadFileSelect_Click);
 			// 
 			// btnReadText
 			// 
@@ -139,6 +140,7 @@
 			this.btnReadText.TabIndex = 2;
 			this.btnReadText.Text = "불러오기";
 			this.btnReadText.UseVisualStyleBackColor = true;
+			this.btnReadText.Click += new System.EventHandler(this.BtnReadText_Click);
 			// 
 			// txtReadText
 			// 
@@ -175,6 +177,7 @@
 			this.btnWriteText.TabIndex = 2;
 			this.btnWriteText.Text = "저장하기";
 			this.btnWriteText.UseVisualStyleBackColor = true;
+			this.btnWriteText.Click += new System.EventHandler(this.BtnWriteText_Click);
 			// 
 			// btnWriteFileSelect
 			// 
@@ -184,6 +187,7 @@
 			this.btnWriteFileSelect.TabIndex = 3;
 			this.btnWriteFileSelect.Text = "파일 선택";
 			this.btnWriteFileSelect.UseVisualStyleBackColor = true;
+			this.btnWriteFileSelect.Click += new System.EventHandler(this.BtnWriteFileSelect_Click);
 			// 
 			// FormFile
 			// 
@@ -219,8 +223,8 @@
 		private System.Windows.Forms.Button btnReadFileSelect;
 		private System.Windows.Forms.TextBox txtReadFile;
 		private System.Windows.Forms.TabPage tpWrite;
-		private System.Windows.Forms.OpenFileDialog openFileDialog;
-		private System.Windows.Forms.SaveFileDialog saveFileDialog;
+		private System.Windows.Forms.OpenFileDialog openFileDlg;
+		private System.Windows.Forms.SaveFileDialog saveFileDlg;
 		private System.Windows.Forms.Button btnWriteFileSelect;
 		private System.Windows.Forms.Button btnWriteText;
 		private System.Windows.Forms.TextBox txtWriteText;
